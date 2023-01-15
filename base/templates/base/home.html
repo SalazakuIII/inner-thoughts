@@ -1,0 +1,18 @@
+{% extends 'main_wrapper.html' %}
+
+
+{% block content %}
+
+<h1> Inner Thoughts </h1>
+
+<h3>Welcome to the beginning of your journey.</h3>
+
+<div>
+    <div>
+        {% for grp in groups %}
+        <div> {{grp.group_id}} - <a href="{% url 'group' grp.group_id %}" >{{grp.group_name}}</a></div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

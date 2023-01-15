@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 ctx_groups = [
     {'group_id':1, 'group_name':'Here For You'},
-    {'group_id':2, 'group_name':'Here For You'},
-    {'group_id':1, 'group_name':'Here For You'}
+    {'group_id':2, 'group_name':'Relationships'},
+    {'group_id':3, 'group_name':'Abuse'}
 ]
 
 def home(request):

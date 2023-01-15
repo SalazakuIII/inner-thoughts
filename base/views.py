@@ -7,6 +7,7 @@ ctx_groups = [
     {'group_id':2, 'group_name':'Relationships'},
     {'group_id':3, 'group_name':'Abuse'}
 ]
+x = "testing"
 
 def home(request):
     return render(request, 'home.html')                             

@@ -10,7 +10,7 @@
 <div>
     <div>
         {% for grp in groups %}
-        <div> {{grp.group_id}} - <a href="{% url 'group' grp.group_id %}" >{{grp.group_name}}</a></div>
+        <div> {{grp.id}} - <a href="{% url 'group' grp.id %}" >{{grp.name}}</a></div>
         {% endfor %}
     </div>
 </div>

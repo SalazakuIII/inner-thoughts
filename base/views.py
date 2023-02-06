@@ -1,17 +1,16 @@
 from django.shortcuts import render
-
+from .models import Group
 # Create your views here.
 
-ctx_groups = [
-    {'group_id':1, 'group_name':'Here For You'},
-    {'group_id':2, 'group_name':'Relationships'},
-    {'group_id':3, 'group_name':'Abuse'}
-]
-x = "testing"
+
 
 def home(request):
-    return render(request, 'home.html')                             
+    groups = Group.objects.all()
+    context = {'groups' : groups}
+    return render(request, 'base/home.html', context)                             
 
-def group(request):
-    return render(request, 'group.html')            
+def group(request, gid):
+    group = Group.objects.get(id=gid)
+    context = {'selected_group' : group}
+    return render(request, 'base/group.html', context)           
     
